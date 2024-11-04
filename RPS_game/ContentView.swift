@@ -11,11 +11,13 @@ enum Items: CaseIterable{
     case rock, papper, scissors
 }
 
+
 struct ContentView: View {
     let items = [Items.rock: "rock", Items.papper: "papper", Items.scissors: "scissors"]
     
     @State private var curerntScore = 0
     @State private var currentAppChoise = Items.random()
+    @State private var isNeedWin = Bool.random()
     
     
     var body: some View {
